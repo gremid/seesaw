@@ -1,7 +1,6 @@
 pom.xml
 *jar
 /lib/
-/classes/
 /target/
 examples/**/target/
 .lein-repl-history
@@ -15,3 +14,4 @@ autodoc/**
 /.classpath
 /.project
 /.settings
+/.cpcache

@@ -1,0 +1,15 @@
+{:paths     ["src" "classes"]
+ :deps      {com.miglayout/miglayout          {:mvn/version "3.7.4"}
+             com.jgoodies/forms               {:mvn/version "1.2.1"}
+             org.swinglabs.swingx/swingx-core {:mvn/version "1.6.3"}
+             j18n/j18n                        {:mvn/version "1.0.2"}
+             com.fifesoft/rsyntaxtextarea     {:mvn/version "2.5.6"}}
+ :aliases   {:build    {:ns-default build
+                        :extra-deps {io.github.clojure/tools.build {:git/tag    "v0.7.5"
+                                                                    :git/sha    "34727f7"}}}
+             :test     {:extra-paths ["test"]
+                        :extra-deps  {com.stuartsierra/lazytest {:mvn/version "1.1.2"}}}
+             :run-test {:main-opts ["-m" "lazytest.main" "test"]}}
+ :mvn/repos {"central"      {:url "https://repo1.maven.org/maven2/"}
+             "clojars"      {:url "https://clojars.org/repo"}
+             "stuartsierra" {:url "https://stuartsierra.com/maven2"}}}
