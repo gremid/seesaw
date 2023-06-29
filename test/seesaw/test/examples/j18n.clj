@@ -9,8 +9,8 @@
 ;   You must not remove this notice, or any other, from this software.
 
 (ns seesaw.test.examples.j18n
-  (use [seesaw.core]
-       seesaw.test.examples.example))
+  (:require [seesaw.core :refer :all]
+            [seesaw.test.examples.example :refer :all]))
 
 (defexample []
   (let [a (action 
