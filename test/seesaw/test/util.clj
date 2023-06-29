@@ -9,6 +9,7 @@
 ;   You must not remove this notice, or any other, from this software.
 
 (ns seesaw.test.util
+  (:refer-clojure :exclude [boolean?])
   (:use seesaw.util)
   (:use [lazytest.describe :only (describe it testing)]
         [lazytest.expect :only (expect)]))

@@ -9,6 +9,7 @@
 ;   You must not remove this notice, or any other, from this software.
 
 (ns seesaw.test.examples.hotpotatoes
+  (:refer-clojure :exclude [boolean?])
   (:use seesaw.core seesaw.util seesaw.font
         seesaw.test.examples.example)
   (:require [clojure.java.io :only reader]))
