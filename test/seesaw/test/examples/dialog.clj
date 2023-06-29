@@ -9,6 +9,7 @@
 ;   You must not remove this notice, or any other, from this software.
 
 (ns seesaw.test.examples.dialog
+  (:refer-clojure :exclude [boolean?])
   (:use [seesaw core font border util color pref mig]
         [clojure.pprint :only (cl-format)]
         seesaw.test.examples.example)

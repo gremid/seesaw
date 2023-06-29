@@ -13,7 +13,7 @@
         [seesaw.color :only [to-color]])
   (:use [lazytest.describe :only (describe it testing)]
         [lazytest.expect :only (expect)])
-  (:import [java.awt RenderingHints]
+  (:import [java.awt Graphics2D RenderingHints]
            [java.awt.image BufferedImage]))
 
 (describe anti-alias
@@ -21,7 +21,7 @@
     (let [bi (buffered-image 100 100)
           g2d (.getGraphics bi)]
       (anti-alias g2d)
-      (expect (= RenderingHints/VALUE_ANTIALIAS_ON (.getRenderingHint g2d RenderingHints/KEY_ANTIALIASING))))))
+      (expect (= RenderingHints/VALUE_ANTIALIAS_ON (.getRenderingHint ^Graphics2D g2d RenderingHints/KEY_ANTIALIASING))))))
 
 (describe to-paint
   (it "returns its input if it's a java.awt.Paint"
