@@ -20,12 +20,12 @@
   ;
   :aliases { "examples" ["run" "-m" "seesaw.test.examples.launcher"] }
 
-  :dependencies [[org.clojure/clojure "1.4.0"]
+  :dependencies [[org.clojure/clojure "1.12.5"]
                  [com.miglayout/miglayout "3.7.4"]
-                 [com.jgoodies/forms "1.2.1"]
+                 [com.jgoodies/jgoodies-forms "1.9.0"]
                  [org.swinglabs.swingx/swingx-core "1.6.3"]
                  [j18n "1.0.2"]
-                 [com.fifesoft/rsyntaxtextarea "2.5.6"]]
+                 [com.fifesoft/rsyntaxtextarea "3.6.2"]]
   :profiles { :dev {:dependencies [[com.stuartsierra/lazytest "1.1.2"]
                                   [lein-autodoc "0.9.0"]]}}
   :repositories [["stuartsierra-releases" "https://stuartsierra.com/maven2"]]
