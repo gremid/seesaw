@@ -2890,7 +2890,6 @@
   (cond
     (nil? w) w
     (instance? java.awt.Window w) w
-    (instance? java.applet.Applet w) w
     (instance? javax.swing.JPopupMenu w)
       (let [^javax.swing.JPopupMenu w w]
       (if-let [p (.getParent w)]
