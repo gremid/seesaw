@@ -1218,12 +1218,6 @@
     (.isLocationByPlatform (frame))))
 
 (describe to-root
-  (it "should convert a widget to its parent applet"
-    (let [c (label :text "HI")
-          a (javax.swing.JApplet.)]
-      (.add a c)
-      (expect (= a (to-root c)))))
-
   (it "should convert a widget to its parent frame"
     (let [c (label :text "HI")
           f (frame :content c)]

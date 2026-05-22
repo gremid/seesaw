@@ -9,7 +9,7 @@
 ;   You must not remove this notice, or any other, from this software.
 
 (ns seesaw.test.examples.j18n
-  (use [seesaw.core]
+  (:use [seesaw.core]
        seesaw.test.examples.example))
 
 (defexample []
