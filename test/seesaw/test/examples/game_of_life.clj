@@ -9,7 +9,6 @@
             [seesaw.dnd :as dnd]
             [seesaw.bind :as b]))
 
-(debug!)
 ; Adapted from http://tech.puredanger.com/2011/11/17/clojure-and-processing/
 ; lein run -m seesaw.test.examples.game-of-life
 

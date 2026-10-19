@@ -68,27 +68,6 @@
     core/show!
     (core/move! :to-front)))
 
-(defonce ^{:private true :tag seesaw.ExceptionHandler} handler (seesaw.ExceptionHandler.))
-
-(defn debug! 
-  "Install a custom exception handler which displays a window with event and
-  stack trace info whenever an unhandled exception occurs in the UI thread.
-  This is usually more friendly than the console, especially in a repl.
-  
-  Calling with no args, enables default debugging. Otherwise, pass a two arg
-  function that takes a java.awt.AWTEvent and a java.lang.Throwable. Passing
-  nil disables debugging.
-  "
-  ([] (debug! show-error-frame))
-  ([f] (core/invoke-now
-    (let [q (.. (java.awt.Toolkit/getDefaultToolkit) getSystemEventQueue)
-          installed? (identical? q handler)] 
-      (cond
-        (and f installed?)       (do (.setHandler handler f) true)
-        (and f (not installed?)) (do (.push q (.setHandler handler f)) true)
-        (and (not f) installed?) (do (.setHandler handler nil) false)
-        :else                    false)))))
-
 (defn- examples-str [examples]
   (string/join (format "%n  %24s  " "") (util/to-seq examples)))
 

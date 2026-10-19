@@ -32,6 +32,5 @@
   :autodoc {
     :name "Seesaw",
     :page-title "Seesaw API Documentation"
-    :copyright "Copyright 2012, Dave Ray" }
-  :java-source-paths ["jvm"])
+    :copyright "Copyright 2012, Dave Ray" })
 

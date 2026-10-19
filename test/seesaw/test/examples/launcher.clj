@@ -104,7 +104,6 @@
   f)
 
 (defexample []
-  (dev/debug!)
   (-> (make-frame)
     add-behaviors))
 
